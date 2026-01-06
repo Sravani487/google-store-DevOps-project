@@ -22,6 +22,11 @@ kubectl patch svc stable-grafana \
 -p '{"spec":{"type":"NodePort"}}'
 
 ```
+# grafana pasword
+```
+kubectl get secret -n prometheus stable-grafana \
+-o jsonpath="{.data.admin-password}" | base64 -d
+```
 ```bash
 kubectl get pods -n prometheus
 kubectl get svc -n prometheus
