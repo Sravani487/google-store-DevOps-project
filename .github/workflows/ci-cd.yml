@@ -1,9 +1,9 @@
 name: CI/CD for Shopping Site (Frontend + Backend)
 
 on:
-  #push:
-    #branches:
-     # - main
+  push:
+    branches:
+      - main
    #workflow_dispatch:   # ✅ Manual trigger only
 
 env:
